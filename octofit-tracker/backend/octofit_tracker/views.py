@@ -5,9 +5,13 @@ from .models import User, Team, Activity, Leaderboard, Workout
 from django.http import JsonResponse
 
 def api_root(request):
+    base_url = 'https://literate-orbit-4gwjxpqqj9v37x74-8000.app.github.dev/'
     return JsonResponse({
-        "message": "Welcome to the Octofit API!",
-        "url": "https://literate-orbit-4gwjxpqqj9v37x74.app.github.dev"
+        "users": base_url + 'api/users/',
+        "teams": base_url + 'api/teams/',
+        "activities": base_url + 'api/activities/',
+        "leaderboard": base_url + 'api/leaderboard/',
+        "workouts": base_url + 'api/workouts/'
     })
 
 class UserViewSet(viewsets.ModelViewSet):
