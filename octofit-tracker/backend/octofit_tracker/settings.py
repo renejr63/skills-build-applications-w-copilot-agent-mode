@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['literate-orbit-4gwjxpqqj9v37x74.app.github.dev', 'localhost']
 
+# Add the codespace Django REST API endpoint suffix
+CODESPACE_API_SUFFIX = "literate-orbit-4gwjxpqqj9v37x74-8000.app.github.dev"
 
 # Application definition
 
